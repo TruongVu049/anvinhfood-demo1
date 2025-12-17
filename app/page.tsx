@@ -3,8 +3,6 @@ import { Footer } from "@/components/footer";
 import { BannerSlider } from "@/components/banner-slider";
 import { FlashSale } from "@/components/flash-sale";
 import { CategoryIcons } from "@/components/category-icons";
-import { BrandLogos } from "@/components/brand-logos";
-import { HealthCheckBanner } from "@/components/health-check-banner";
 import { QuickActions } from "@/components/quick-actions";
 import { SeasonalDisease } from "@/components/seasonal-disease";
 import { BestSellers } from "@/components/best-sellers";

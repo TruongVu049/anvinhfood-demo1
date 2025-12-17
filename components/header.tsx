@@ -270,7 +270,7 @@ export function Header() {
       {/* Top bar */}
       <div className="bg-[#1a56db] text-white text-sm">
         <div className="max-w-7xl mx-auto px-4 md:flex hidden fitems-center justify-between h-9">
-          <div className="flexitems-center gap-2">
+          <div className="flex items-center gap-2">
             <Search className="w-3.5 h-3.5" />
             <span className="hidden sm:inline text-sm">
               Thực phẩm đông lạnh chất lượng cao
