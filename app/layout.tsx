@@ -1,21 +1,32 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin", "vietnamese"] })
+const inter = Inter({ subsets: ["latin", "vietnamese"] });
 
 export const metadata: Metadata = {
-  title: "Nhà Thuốc Long Châu - Hệ thống nhà thuốc uy tín hàng đầu Việt Nam",
-  description: "Hệ thống 2377 nhà thuốc trên toàn quốc. Thuốc, thực phẩm chức năng, dược mỹ phẩm chính hãng.",
-  generator: "v0.app",
-}
+  title: "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ AN VĨNH		",
+  description: "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ AN VĨNH",
+  icons: {
+    icon: [
+      { url: "/favicon.png" },
+      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/favicon.png" }],
+    other: [
+      { rel: "android-chrome-192x192", url: "/favicon.png" },
+      { rel: "android-chrome-512x512", url: "/favicon.png" },
+    ],
+  },
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="vi">
@@ -24,5 +35,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

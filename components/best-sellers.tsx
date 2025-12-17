@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { ProductCard } from "./product-card"
+import { ProductCard } from "./product-card";
 
 const bestSellerProducts = [
   {
     id: "bs1",
-    name: "Combo thịt bò Úc cao cấp 1kg (Thăn + Ba chỉ)",
-    image: "/juicy-beef-steak.png",
-    price: 485000,
-    originalPrice: 580000,
-    unit: "Combo",
-    discount: 25,
-    packaging: "1kg",
+    name: "Cá hồi Na Uy nguyên con đông lạnh 2-3kg",
+    image: "/salmon-fish.jpg",
+    price: 890000,
+    originalPrice: 1100000,
+    unit: "Con",
+    discount: 20,
+    packaging: "2-3kg",
   },
   {
     id: "bs2",
@@ -35,13 +35,13 @@ const bestSellerProducts = [
   },
   {
     id: "bs4",
-    name: "Pizza phô mai 4 vị đông lạnh 12 inch",
-    image: "/frozen-pizza.png",
-    price: 159000,
-    originalPrice: 199000,
-    unit: "Chiếc",
+    name: "Cá hồi Na Uy nguyên con đông lạnh 2-3kg",
+    image: "/salmon-fish.jpg",
+    price: 890000,
+    originalPrice: 1100000,
+    unit: "Con",
     discount: 20,
-    packaging: "12 inch",
+    packaging: "2-3kg",
   },
   {
     id: "bs5",
@@ -54,17 +54,19 @@ const bestSellerProducts = [
   },
   {
     id: "bs6",
-    name: "Xúc xích Đức Johnsonville Original 360g",
-    image: "/sausages.jpg",
-    price: 145000,
-    unit: "Gói",
-    packaging: "360g",
+    name: "Cá hồi Na Uy nguyên con đông lạnh 2-3kg",
+    image: "/salmon-fish.jpg",
+    price: 890000,
+    originalPrice: 1100000,
+    unit: "Con",
+    discount: 20,
+    packaging: "2-3kg",
   },
-]
+];
 
 export function BestSellers() {
   return (
-    <section className="py-8">
+    <section className="relative bg-gradient-to-r from-[#1a56db] via-[#3b82f6] to-[#60a5fa] rounded-t-2xl py-8 px-3 overflow-hidden">
       {/* Section Header */}
       <div className="relative mb-6">
         <div className="absolute inset-0 flex items-center justify-center">
@@ -76,7 +78,7 @@ export function BestSellers() {
       </div>
 
       {/* Products Grid */}
-      <div className="bg-gradient-to-b from-blue-50 to-white rounded-2xl p-6 mt-8">
+      <div className="py-6 mt-8">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {bestSellerProducts.map((product) => (
             <ProductCard key={product.id} {...product} />
@@ -84,5 +86,5 @@ export function BestSellers() {
         </div>
       </div>
     </section>
-  )
+  );
 }

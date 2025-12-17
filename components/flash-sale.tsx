@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { ProductCard } from "./product-card"
-import { ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react";
+import { ProductCard } from "./product-card";
+import { ChevronRight } from "lucide-react";
 
 const timeSlots = [
   { time: "08:00 - 22:00, 17/12", status: "Đang diễn ra", active: true },
   { time: "08:00 - 12:59, 18/12", status: "Sắp diễn ra", active: false },
   { time: "13:00 - 17:59, 18/12", status: "Sắp diễn ra", active: false },
   { time: "18:00 - 22:00, 18/12", status: "Sắp diễn ra", active: false },
-]
+];
 
 const flashSaleProducts = [
   {
     id: "1",
-    name: "Thăn nội bò Úc đông lạnh Pacow cao cấp 500g",
-    image: "/perfectly-seared-beef-tenderloin.png",
+    name: "Cá hồi Na Uy nguyên con đông lạnh 2-3kg",
+    image: "/salmon-fish.jpg",
     price: 245000,
     originalPrice: 315000,
     unit: "Khay",
@@ -44,8 +44,8 @@ const flashSaleProducts = [
   },
   {
     id: "4",
-    name: "Ba chỉ bò Mỹ cắt lát BBQ đông lạnh 300g",
-    image: "/beef-belly-sliced.jpg",
+    name: "Cua hoàng đế Alaska nguyên con 1.5kg",
+    image: "/king-crab.jpg",
     price: 165000,
     originalPrice: 212000,
     unit: "Khay",
@@ -54,48 +54,48 @@ const flashSaleProducts = [
   },
   {
     id: "5",
-    name: "Sò điệp Nhật Bản size L đông lạnh 500g",
-    image: "/japanese-scallop.jpg",
-    price: 325000,
-    originalPrice: 420000,
+    name: "Tôm sú size 20 đông lạnh tự nhiên 1kg",
+    image: "/tiger-shrimp.jpg",
+    price: 385000,
+    originalPrice: 495000,
     unit: "Hộp",
     discount: 22,
     showFlashDeal: true,
   },
   {
     id: "6",
-    name: "Khoai tây McCain Shoestring chiên giòn 1kg",
-    image: "/frozen-fries.jpg",
-    price: 75000,
-    originalPrice: 95000,
-    unit: "Gói",
+    name: "Cua hoàng đế Alaska nguyên con 1.5kg",
+    image: "/king-crab.jpg",
+    price: 165000,
+    originalPrice: 212000,
+    unit: "Khay",
     discount: 22,
     showFlashDeal: true,
   },
-]
+];
 
 export function FlashSale() {
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
     minutes: 51,
     seconds: 2,
-  })
+  });
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 }
+          return { ...prev, seconds: prev.seconds - 1 };
         } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 }
+          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
         } else if (prev.hours > 0) {
-          return { hours: prev.hours - 1, minutes: 59, seconds: 59 }
+          return { hours: prev.hours - 1, minutes: 59, seconds: 59 };
         }
-        return prev
-      })
-    }, 1000)
-    return () => clearInterval(timer)
-  }, [])
+        return prev;
+      });
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="my-8">
@@ -107,7 +107,10 @@ export function FlashSale() {
         </div>
         <div className="relative flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <h2 className="text-3xl font-bold text-white italic" style={{ fontFamily: "cursive" }}>
+            <h2
+              className="text-3xl font-bold text-white italic"
+              style={{ fontFamily: "cursive" }}
+            >
               Flash<span className="text-cyan-300">sale</span> GIÁ SỐC
             </h2>
             <span className="text-white text-sm">❄️ Đông lạnh tươi ngon</span>
@@ -116,7 +119,9 @@ export function FlashSale() {
             XEM NGAY {">"}
           </button>
         </div>
-        <div className="text-right text-white text-sm mt-1">Xem thể lệ {">"}</div>
+        <div className="text-right text-white text-sm mt-1">
+          Xem thể lệ {">"}
+        </div>
       </div>
 
       {/* Time Slots */}
@@ -126,11 +131,25 @@ export function FlashSale() {
             <button
               key={index}
               className={`flex-1 min-w-[180px] py-3 px-4 text-center border-b-2 transition-colors ${
-                slot.active ? "border-[#1a56db] bg-blue-50" : "border-transparent hover:bg-gray-50"
+                slot.active
+                  ? "border-[#1a56db] bg-blue-50"
+                  : "border-transparent hover:bg-gray-50"
               }`}
             >
-              <div className={`font-semibold ${slot.active ? "text-[#1a56db]" : "text-gray-700"}`}>{slot.time}</div>
-              <div className={`text-xs ${slot.active ? "text-[#ff3b3b]" : "text-gray-500"}`}>{slot.status}</div>
+              <div
+                className={`font-semibold ${
+                  slot.active ? "text-[#1a56db]" : "text-gray-700"
+                }`}
+              >
+                {slot.time}
+              </div>
+              <div
+                className={`text-xs ${
+                  slot.active ? "text-[#ff3b3b]" : "text-gray-500"
+                }`}
+              >
+                {slot.status}
+              </div>
             </button>
           ))}
         </div>
@@ -169,9 +188,11 @@ export function FlashSale() {
           </button>
         </div>
         <div className="text-center mt-6">
-          <button className="text-[#1a56db] font-medium hover:underline">Xem tất cả {">"}</button>
+          <button className="text-[#1a56db] font-medium hover:underline">
+            Xem tất cả {">"}
+          </button>
         </div>
       </div>
     </section>
-  )
+  );
 }

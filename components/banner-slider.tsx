@@ -1,26 +1,22 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const banners = [
   {
     id: 1,
-    image: "/premium-frozen-seafood-salmon-shrimp-blue-backgrou.jpg",
+    image: "/banner1.png",
     alt: "Hải sản đông lạnh cao cấp",
   },
   {
     id: 2,
-    image: "/imported-beef-steak-premium-quality-winter-promoti.jpg",
-    alt: "Thịt bò nhập khẩu",
+    image: "/banner2.png",
+    title: "Tôm sú đông lạnh - Tươi ngon mỗi ngày",
+    cta: "Khám phá",
   },
-  {
-    id: 3,
-    image: "/frozen-vegetables-healthy-food-green-background.jpg",
-    alt: "Rau củ đông lạnh tươi ngon",
-  },
-]
+];
 
 const sideBanners = [
   {
@@ -31,8 +27,8 @@ const sideBanners = [
   },
   {
     id: 2,
-    image: "/wagyu-beef-premium-steak.jpg",
-    title: "Bò Wagyu Nhật Bản - Mới về",
+    image: "/pan-seared-salmon.png",
+    title: "Cá hồi Na Uy phi lê đông lạnh 500g",
     cta: "Khám phá",
   },
   {
@@ -41,36 +37,36 @@ const sideBanners = [
     title: "Freeship đơn từ 500K - Giao lạnh 2h",
     cta: "Xem chi tiết",
   },
-]
+];
 
 const smallBanners = [
   {
-    image: "/placeholder.svg?height=150&width=200",
+    image: "/banner2.png",
     alt: "Combo tiết kiệm",
   },
   {
-    image: "/placeholder.svg?height=150&width=200",
+    image: "/banner3.png",
     alt: "Ưu đãi thành viên mới",
   },
-]
+];
 
 export function BannerSlider() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % banners.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [])
+      setCurrentSlide((prev) => (prev + 1) % banners.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % banners.length)
-  }
+    setCurrentSlide((prev) => (prev + 1) % banners.length);
+  };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length)
-  }
+    setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length);
+  };
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
@@ -86,7 +82,7 @@ export function BannerSlider() {
             >
               <Image
                 src={banner.image || "/placeholder.svg"}
-                alt={banner.alt}
+                alt={"image"}
                 fill
                 className="object-cover"
                 priority={index === 0}
@@ -121,7 +117,10 @@ export function BannerSlider() {
         {/* Small banners below main */}
         <div className="grid grid-cols-2 gap-4 mt-4">
           {smallBanners.map((banner, index) => (
-            <div key={index} className="rounded-xl overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
+            <div
+              key={index}
+              className="rounded-xl overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            >
               <Image
                 src={banner.image || "/placeholder.svg"}
                 alt={banner.alt}
@@ -150,7 +149,9 @@ export function BannerSlider() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center px-4">
               <div>
-                <h3 className="text-white font-bold text-sm leading-tight mb-2">{banner.title}</h3>
+                <h3 className="text-white font-bold text-sm leading-tight mb-2">
+                  {banner.title}
+                </h3>
                 <button className="px-3 py-1 bg-cyan-500 text-white text-xs rounded-full hover:bg-cyan-600 transition-colors">
                   {banner.cta}
                 </button>
@@ -160,5 +161,5 @@ export function BannerSlider() {
         ))}
       </div>
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { MapPin, Facebook } from "lucide-react"
+import Link from "next/link";
+import { MapPin, Facebook } from "lucide-react";
 
 const aboutLinks = [
   "Giới thiệu",
@@ -14,17 +14,15 @@ const aboutLinks = [
   "Chính sách thanh toán",
   "Quy trình vận chuyển đông lạnh",
   "Cam kết chất lượng",
-]
+];
 
 const categoryLinks = [
-  "Thịt đông lạnh",
-  "Hải sản",
-  "Rau củ đông lạnh",
+  "Hải sản cao cấp",
+  "Hải sản bình dân",
   "Đồ ăn chế biến sẵn",
-  "Kem & Tráng miệng",
   "Combo tiết kiệm",
   "Khuyến mãi",
-]
+];
 
 const moreLinks = [
   "Góc ẩm thực",
@@ -33,14 +31,18 @@ const moreLinks = [
   "Kiến thức dinh dưỡng",
   "Tin tức khuyến mãi",
   "Tuyển dụng",
-]
+];
 
 const guarantees = [
   { icon: "❄️", text: "Đông lạnh chuẩn", subtext: "-18°C đến -25°C" },
-  { icon: "↩️", text: "Đổi trả trong 24h", subtext: "nếu không hài lòng" },
+  {
+    icon: "↩️",
+    text: "Đổi trả trong vòng 7 ngày",
+    subtext: "nếu không hài lòng",
+  },
   { icon: "✅", text: "Cam kết 100%", subtext: "nguồn gốc rõ ràng" },
   { icon: "🚚", text: "Giao hàng lạnh", subtext: "giữ trọn độ tươi" },
-]
+];
 
 export function Footer() {
   return (
@@ -69,7 +71,9 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-white">
             <MapPin className="w-6 h-6" />
-            <span className="text-lg font-medium">Xem hệ thống 50+ cửa hàng trên toàn quốc</span>
+            <span className="text-lg font-medium">
+              Xem hệ thống 50+ cửa hàng trên toàn quốc
+            </span>
           </div>
           <Link
             href="#"
@@ -85,11 +89,16 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* About */}
           <div>
-            <h3 className="font-bold text-gray-900 mb-4 text-sm">VỀ CHÚNG TÔI</h3>
+            <h3 className="font-bold text-gray-900 mb-4 text-sm">
+              VỀ CHÚNG TÔI
+            </h3>
             <ul className="space-y-2">
               {aboutLinks.slice(0, 10).map((link) => (
                 <li key={link}>
-                  <Link href="#" className="text-sm text-gray-600 hover:text-[#1a56db]">
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-600 hover:text-[#1a56db]"
+                  >
                     {link}
                   </Link>
                 </li>
@@ -103,7 +112,10 @@ export function Footer() {
             <ul className="space-y-2">
               {categoryLinks.map((link) => (
                 <li key={link}>
-                  <Link href="#" className="text-sm text-gray-600 hover:text-[#1a56db]">
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-600 hover:text-[#1a56db]"
+                  >
                     {link}
                   </Link>
                 </li>
@@ -113,11 +125,16 @@ export function Footer() {
 
           {/* More info */}
           <div>
-            <h3 className="font-bold text-gray-900 mb-4 text-sm">TÌM HIỂU THÊM</h3>
+            <h3 className="font-bold text-gray-900 mb-4 text-sm">
+              TÌM HIỂU THÊM
+            </h3>
             <ul className="space-y-2">
               {moreLinks.map((link) => (
                 <li key={link}>
-                  <Link href="#" className="text-sm text-gray-600 hover:text-[#1a56db]">
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-600 hover:text-[#1a56db]"
+                  >
                     {link}
                   </Link>
                 </li>
@@ -127,25 +144,34 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-gray-900 mb-4 text-sm">TỔNG ĐÀI (7:00-22:00)</h3>
+            <h3 className="font-bold text-gray-900 mb-4 text-sm">
+              TỔNG ĐÀI (7:00-22:00)
+            </h3>
             <div className="space-y-3">
               <div>
                 <p className="text-sm text-gray-600">Đặt hàng</p>
-                <Link href="tel:19001234" className="text-[#1a56db] font-bold text-lg">
-                  1900 1234
-                </Link>
+                <Link
+                  href="tel:19001234"
+                  className="text-[#1a56db] font-bold text-lg"
+                ></Link>
                 <span className="text-xs text-gray-500 ml-1">(Nhánh 1)</span>
               </div>
               <div>
                 <p className="text-sm text-gray-600">Hỗ trợ khách hàng</p>
-                <Link href="tel:19001234" className="text-[#1a56db] font-bold text-lg">
+                <Link
+                  href="tel:19001234"
+                  className="text-[#1a56db] font-bold text-lg"
+                >
                   1900 1234
                 </Link>
                 <span className="text-xs text-gray-500 ml-1">(Nhánh 2)</span>
               </div>
               <div>
                 <p className="text-sm text-gray-600">Góp ý, khiếu nại</p>
-                <Link href="tel:19001234" className="text-[#1a56db] font-bold text-lg">
+                <Link
+                  href="tel:19001234"
+                  className="text-[#1a56db] font-bold text-lg"
+                >
                   1900 1234
                 </Link>
                 <span className="text-xs text-gray-500 ml-1">(Nhánh 3)</span>
@@ -154,20 +180,28 @@ export function Footer() {
 
             {/* Certifications */}
             <div className="mt-6">
-              <h4 className="text-sm font-bold text-gray-900 mb-3">CHỨNG NHẬN</h4>
+              <h4 className="text-sm font-bold text-gray-900 mb-3">
+                CHỨNG NHẬN
+              </h4>
               <div className="flex items-center gap-3">
                 <div className="w-20 h-10 bg-green-50 rounded flex items-center justify-center">
-                  <span className="text-xs text-green-600 font-medium">ATTP</span>
+                  <span className="text-xs text-green-600 font-medium">
+                    ATTP
+                  </span>
                 </div>
                 <div className="w-20 h-10 bg-blue-50 rounded flex items-center justify-center">
-                  <span className="text-xs text-blue-600 font-medium">ISO 22000</span>
+                  <span className="text-xs text-blue-600 font-medium">
+                    ISO 22000
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* Payment */}
             <div className="mt-6">
-              <h4 className="text-sm font-bold text-gray-900 mb-3">HỖ TRỢ THANH TOÁN</h4>
+              <h4 className="text-sm font-bold text-gray-900 mb-3">
+                HỖ TRỢ THANH TOÁN
+              </h4>
               <div className="flex flex-wrap items-center gap-2">
                 <div className="w-12 h-8 bg-blue-900 rounded text-white text-xs flex items-center justify-center font-bold">
                   VISA
@@ -196,7 +230,9 @@ export function Footer() {
 
           {/* Social & App */}
           <div>
-            <h3 className="font-bold text-gray-900 mb-4 text-sm">KẾT NỐI VỚI CHÚNG TÔI</h3>
+            <h3 className="font-bold text-gray-900 mb-4 text-sm">
+              KẾT NỐI VỚI CHÚNG TÔI
+            </h3>
             <div className="flex items-center gap-3 mb-6">
               <Link
                 href="#"
@@ -208,7 +244,11 @@ export function Footer() {
                 href="#"
                 className="w-10 h-10 bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 rounded-full flex items-center justify-center text-white hover:opacity-80"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                 </svg>
               </Link>
@@ -216,7 +256,11 @@ export function Footer() {
                 href="#"
                 className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center text-white hover:opacity-80"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
               </Link>
@@ -224,35 +268,13 @@ export function Footer() {
                 href="#"
                 className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white hover:opacity-80"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
                 </svg>
-              </Link>
-            </div>
-
-            <h3 className="font-bold text-gray-900 mb-4 text-sm">TẢI ỨNG DỤNG</h3>
-            <div className="space-y-2">
-              <Link href="#" className="block">
-                <div className="bg-black text-white rounded-lg px-3 py-2 flex items-center gap-2 hover:bg-gray-800 transition-colors">
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                  </svg>
-                  <div>
-                    <div className="text-[8px]">Download on the</div>
-                    <div className="text-sm font-semibold -mt-0.5">App Store</div>
-                  </div>
-                </div>
-              </Link>
-              <Link href="#" className="block">
-                <div className="bg-black text-white rounded-lg px-3 py-2 flex items-center gap-2 hover:bg-gray-800 transition-colors">
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z" />
-                  </svg>
-                  <div>
-                    <div className="text-[8px]">GET IT ON</div>
-                    <div className="text-sm font-semibold -mt-0.5">Google Play</div>
-                  </div>
-                </div>
               </Link>
             </div>
           </div>
@@ -262,13 +284,14 @@ export function Footer() {
       {/* Copyright */}
       <div className="border-t">
         <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
-          <p>© 2020 - 2025 Công ty TNHH Thực Phẩm Đông Lạnh Fresh Frozen - ĐKKD: 0123456789</p>
-          <p className="mt-1">Giấy phép ATTP số: 123/ATTP-BCT cấp ngày 01/01/2020</p>
+          <p>© 2020 - 2025 CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ AN VĨNH</p>
           <p className="mt-2">
-            • Địa chỉ: 123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh • Hotline: 1900 1234 • Email: contact@freshfrozen.vn
+            • Địa chỉ: 87/23 Khu phố 4, đường Phan Văn Hớn, Phường Tân Thới
+            Nhất, Quận 12, Tp HCM • Hotline: 0813.662.778 • Email:
+            anvinhfood.official@gmail.com
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

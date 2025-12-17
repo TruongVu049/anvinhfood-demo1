@@ -1,22 +1,23 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { BannerSlider } from "@/components/banner-slider"
-import { FlashSale } from "@/components/flash-sale"
-import { CategoryIcons } from "@/components/category-icons"
-import { BrandLogos } from "@/components/brand-logos"
-import { HealthCheckBanner } from "@/components/health-check-banner"
-import { QuickActions } from "@/components/quick-actions"
-import { SeasonalDisease } from "@/components/seasonal-disease"
-import { BestSellers } from "@/components/best-sellers"
-import { DealBanners } from "@/components/deal-banners"
-import { ProductCard } from "@/components/product-card"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { BannerSlider } from "@/components/banner-slider";
+import { FlashSale } from "@/components/flash-sale";
+import { CategoryIcons } from "@/components/category-icons";
+import { BrandLogos } from "@/components/brand-logos";
+import { HealthCheckBanner } from "@/components/health-check-banner";
+import { QuickActions } from "@/components/quick-actions";
+import { SeasonalDisease } from "@/components/seasonal-disease";
+import { BestSellers } from "@/components/best-sellers";
+import { DealBanners } from "@/components/deal-banners";
+import { ProductCard } from "@/components/product-card";
 
 const recentlyViewed = [
   {
     id: "rv1",
-    name: "Thăn nội bò Úc đông lạnh Pacow cao cấp 500g",
-    image: "/perfectly-seared-beef-tenderloin.png",
-    price: 285000,
+    name: "Cá hồi Na Uy phi lê đông lạnh tươi ngon 500g",
+    image: "/pan-seared-salmon.png",
+    price: 320000,
+    originalPrice: 410000,
     unit: "Khay",
     discount: 22,
     packaging: "500g",
@@ -43,13 +44,13 @@ const recentlyViewed = [
   },
   {
     id: "rv4",
-    name: "Pizza phô mai 4 vị đông lạnh 12 inch",
-    image: "/frozen-pizza.png",
-    price: 159000,
-    originalPrice: 199000,
-    unit: "Chiếc",
-    discount: 20,
-    packaging: "12 inch",
+    name: "Cá hồi Na Uy phi lê đông lạnh tươi ngon 500g",
+    image: "/pan-seared-salmon.png",
+    price: 320000,
+    originalPrice: 410000,
+    unit: "Khay",
+    discount: 22,
+    packaging: "500g",
   },
   {
     id: "rv5",
@@ -63,15 +64,15 @@ const recentlyViewed = [
   },
   {
     id: "rv6",
-    name: "Khoai tây McCain Shoestring chiên giòn 1kg",
-    image: "/frozen-fries.jpg",
-    price: 89000,
-    originalPrice: 110000,
-    unit: "Gói",
-    discount: 19,
-    packaging: "1kg",
+    name: "Cá hồi Na Uy phi lê đông lạnh tươi ngon 500g",
+    image: "/pan-seared-salmon.png",
+    price: 320000,
+    originalPrice: 410000,
+    unit: "Khay",
+    discount: 22,
+    packaging: "500g",
   },
-]
+];
 
 export default function HomePage() {
   return (
@@ -97,12 +98,6 @@ export default function HomePage() {
         {/* Category Icons */}
         <CategoryIcons />
 
-        {/* Brand Logos */}
-        <BrandLogos />
-
-        {/* Health Check Banner */}
-        <HealthCheckBanner />
-
         {/* Seasonal Disease -> Meal Suggestions */}
         <SeasonalDisease />
 
@@ -112,7 +107,9 @@ export default function HomePage() {
             <div className="w-6 h-6 bg-[#1a56db] rounded-full flex items-center justify-center">
               <span className="text-white text-xs">👁️</span>
             </div>
-            <h2 className="text-xl font-bold text-gray-900">Sản phẩm vừa xem</h2>
+            <h2 className="text-xl font-bold text-gray-900">
+              Sản phẩm vừa xem
+            </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {recentlyViewed.map((product) => (
@@ -124,5 +121,5 @@ export default function HomePage() {
 
       <Footer />
     </div>
-  )
+  );
 }

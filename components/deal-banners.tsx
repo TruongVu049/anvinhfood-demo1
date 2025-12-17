@@ -1,5 +1,5 @@
-import Link from "next/link"
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
 
 const deals = [
   {
@@ -8,34 +8,34 @@ const deals = [
     href: "#",
   },
   {
-    image: "/premium-beef-steak-winter-promotion.jpg",
-    alt: "Thịt bò nhập khẩu - Ưu đãi mùa đông",
+    image: "/banner1.png",
+    alt: "Hải sản tươi sống - Giảm đến 30%",
     href: "#",
   },
-]
+];
 
 const subDeals = [
   {
-    image: "/frozen-premium-meat-winter-sale.jpg",
+    image: "/banner2.png",
     alt: "Thịt nhập khẩu",
     href: "#",
   },
   {
-    image: "/frozen-vegetables-healthy-food.jpg",
+    image: "/banner3.png",
     alt: "Rau củ đông lạnh",
     href: "#",
   },
   {
-    image: "/frozen-pizza-ice-cream-dessert.jpg",
+    image: "/banner1.png",
     alt: "Kem & Tráng miệng",
     href: "#",
   },
   {
-    image: "/frozen-dim-sum-dumplings.jpg",
+    image: "/banner3.png",
     alt: "Đồ ăn chế biến sẵn",
     href: "#",
   },
-]
+];
 
 export function DealBanners() {
   return (
@@ -50,7 +50,11 @@ export function DealBanners() {
       {/* Top banners */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         {deals.map((deal, index) => (
-          <Link key={index} href={deal.href} className="rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+          <Link
+            key={index}
+            href={deal.href}
+            className="rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
+          >
             <Image
               src={deal.image || "/placeholder.svg"}
               alt={deal.alt}
@@ -65,7 +69,11 @@ export function DealBanners() {
       {/* Bottom banners */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {subDeals.map((deal, index) => (
-          <Link key={index} href={deal.href} className="rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+          <Link
+            key={index}
+            href={deal.href}
+            className="rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
+          >
             <Image
               src={deal.image || "/placeholder.svg"}
               alt={deal.alt}
@@ -77,5 +85,5 @@ export function DealBanners() {
         ))}
       </div>
     </section>
-  )
+  );
 }
