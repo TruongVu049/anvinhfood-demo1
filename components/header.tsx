@@ -229,14 +229,13 @@ const mainCategories = [
 ];
 
 const quickSearchTerms = [
-  "Bò Úc",
   "Cá hồi",
   "Tôm sú",
-  "Khoai tây chiên",
-  "Há cảo",
-  "Pizza",
-  "Kem Häagen-Dazs",
-  "Thịt heo Iberico",
+  "Cua biển",
+  "Mực ống",
+  "Sò điệp",
+  "Hàu sữa",
+  "Bạch tuộc",
 ];
 
 export function Header() {
