@@ -262,8 +262,8 @@ export default function BaiVietPage() {
         </section>
 
         {/* Quality Badges */}
-        <section className="bg-white py-20 border-b border-[#e0e0e0]">
-          <div className="max-w-[1400px] mx-auto items-stretch px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className="bg-white pt-20 border-b border-[#e0e0e0]">
+          <div className="max-w-[1400px] mx-auto items-stretch px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {qualityBadges.map((badge, index) => (
               <FadeInElement key={badge.title} delay={index * 100}>
                 <div className="text-center h-full p-10 rounded-[15px] bg-white border-2 border-[#f0f0f0] transition-all duration-300 cursor-pointer hover:translate-y-[-5px] hover:shadow-[0_10px_30px_rgba(33,150,243,0.15)] hover:border-[#1a56db] group">
@@ -286,7 +286,7 @@ export default function BaiVietPage() {
         </section>
 
         {/* Story Section */}
-        <section id="story" className="py-24 bg-[#fafafa]">
+        <section id="story" className="pt-24 bg-[#fafafa]">
           <div className="max-w-[1400px] mx-auto px-8">
             {/* Section Header */}
             <div className="text-center mb-16">
@@ -311,7 +311,7 @@ export default function BaiVietPage() {
                   className="mb-20 last:mb-0"
                 >
                   <div
-                    className={`grid grid-cols-1 lg:grid-cols-2 gap-16 ${
+                    className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 ${
                       index % 2 === 1 ? "lg:direction-rtl" : ""
                     }`}
                   >
@@ -384,7 +384,7 @@ export default function BaiVietPage() {
             </div>
 
             {/* Product Content Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center mb-16">
               {/* Product Image */}
               <FadeInElement delay={100}>
                 <div className="relative">
@@ -423,7 +423,7 @@ export default function BaiVietPage() {
             <FadeInElement delay={400}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Product Info Card */}
-                <div className="bg-white rounded-[20px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
+                <div className="bg-white rounded-[20px] p-4 md:p-8 shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
                   <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6 flex items-center gap-3">
                     <div className="w-12 h-12 bg-[#1a56db] rounded-full flex items-center justify-center">
                       <BookText className="text-white" />
@@ -432,14 +432,14 @@ export default function BaiVietPage() {
                   </h3>
 
                   <div className="space-y-4">
-                    <div className="flex items-start gap-4 p-4 bg-[#fafafa] rounded-[10px]">
+                    <div className="flex flex-wrap md:flex-nowrap items-start gap-4 p-4 bg-[#fafafa] rounded-[10px]">
                       <span className="text-[#1a56db] font-bold min-w-[140px]">
                         Thành phần:
                       </span>
                       <span className="text-[#1a1a1a]">Tôm 96%, muối 4%</span>
                     </div>
 
-                    <div className="flex items-start gap-4 p-4 bg-[#E3F2FD] rounded-[10px]">
+                    <div className="flex  flex-wrap md:flex-nowrap items-start gap-4 p-4 bg-[#E3F2FD] rounded-[10px]">
                       <span className="text-[#1a56db] font-bold min-w-[140px]">
                         Cam kết:
                       </span>
@@ -448,14 +448,14 @@ export default function BaiVietPage() {
                       </span>
                     </div>
 
-                    <div className="flex items-start gap-4 p-4 bg-[#fafafa] rounded-[10px]">
+                    <div className="flex flex-wrap md:flex-nowrap items-start gap-4 p-4 bg-[#fafafa] rounded-[10px]">
                       <span className="text-[#1a56db] font-bold min-w-[140px]">
                         Kích cỡ S:
                       </span>
                       <span className="text-[#1a1a1a]">2000-3000 con/kg</span>
                     </div>
 
-                    <div className="flex items-start gap-4 p-4 bg-[#fafafa] rounded-[10px]">
+                    <div className="flex  flex-wrap md:flex-nowrap items-start gap-4 p-4 bg-[#fafafa] rounded-[10px]">
                       <span className="text-[#1a56db] font-bold min-w-[140px]">
                         Khối lượng:
                       </span>
@@ -474,7 +474,7 @@ export default function BaiVietPage() {
                 </div>
 
                 {/* Storage Guide Card */}
-                <div className="rounded-[20px] p-8 text-[#1a1a1a] shadow-[0_10px_40px_rgba(26,86,219,0.3)]">
+                <div className="rounded-[20px] p-4 md:p-8 text-[#1a1a1a] shadow-[0_10px_40px_rgba(26,86,219,0.3)]">
                   <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                     <div className="w-12 h-12 bg-[#1a56db] rounded-full flex items-center justify-center">
                       <ThermometerSnowflake className="w-6 h-6 text-white" />
@@ -531,7 +531,7 @@ export default function BaiVietPage() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="py-24 bg-white">
+        <section id="features" className="pt-24 bg-white">
           <div className="max-w-[1400px] mx-auto px-8">
             {/* Section Header */}
             <div className="text-center mb-16">
@@ -544,7 +544,7 @@ export default function BaiVietPage() {
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 mt-12">
               {features.map((feature, index) => (
                 <FadeInElement key={feature.title} delay={index * 100}>
                   <div className="p-10 bg-white border-2 border-[#f0f0f0] rounded-[15px] text-center transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-[#1a56db] before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:translate-y-[-5px] hover:shadow-[0_15px_40px_rgba(33,150,243,0.15)] hover:border-[#1a56db] group">
@@ -578,7 +578,7 @@ export default function BaiVietPage() {
             </div>
 
             {/* Audience Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 items-stretch lg:grid-cols-3 gap-12 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-stretch lg:grid-cols-3 gap-6 md:gap-12 mt-12">
               {audienceData.map((audience, index) => (
                 <FadeInElement key={audience.title} delay={index * 100}>
                   <div className="bg-[#fafafa] h-full p-12 rounded-[15px] text-center border-2 border-[#f0f0f0] transition-all duration-300 hover:bg-white hover:translate-y-[-5px] hover:border-[#1a56db] hover:shadow-[0_10px_30px_rgba(33,150,243,0.15)] group">
