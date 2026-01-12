@@ -8,12 +8,12 @@ const banners = [
   {
     id: 1,
     image: "/banner1.png",
-    alt: "Hải sản đông lạnh cao cấp",
+    alt: "Vật liệu xây dựng chất lượng cao",
   },
   {
     id: 2,
     image: "/banner2.png",
-    title: "Tôm sú đông lạnh - Tươi ngon mỗi ngày",
+    title: "Vật liệu xây dựng - Giá tốt mỗi ngày",
     cta: "Khám phá",
   },
 ];
@@ -21,20 +21,20 @@ const banners = [
 const sideBanners = [
   {
     id: 1,
-    image: "/frozen-lobster-crab-seafood.jpg",
-    title: "Hải sản cao cấp - Giảm đến 30%",
+    image: "/ximang.png",
+    title: "Xi măng chính hãng - Giảm đến 20%",
     cta: "Mua ngay",
   },
   {
     id: 2,
-    image: "/pan-seared-salmon.png",
-    title: "Cá hồi Na Uy phi lê đông lạnh 500g",
+    image: "/thep.png",
+    title: "Thép xây dựng Pomina - Chất lượng cao",
     cta: "Khám phá",
   },
   {
     id: 3,
-    image: "/frozen-food-delivery-truck.jpg",
-    title: "Freeship đơn từ 500K - Giao lạnh 2h",
+    image: "/son.png",
+    title: "Freeship từ 5 triệu - Giao tận công trình",
     cta: "Xem chi tiết",
   },
 ];
@@ -42,11 +42,11 @@ const sideBanners = [
 const smallBanners = [
   {
     image: "/banner2.png",
-    alt: "Combo tiết kiệm",
+    alt: "Combo vật liệu tiết kiệm",
   },
   {
     image: "/banner3.png",
-    alt: "Ưu đãi thành viên mới",
+    alt: "Ưu đãi khách hàng mới",
   },
 ];
 
@@ -69,10 +69,10 @@ export function BannerSlider() {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 sm:gap-4">
       {/* Main banner - takes 8 columns */}
-      <div className="lg:col-span-8 relative rounded-2xl overflow-hidden">
-        <div className="relative aspect-[2/1]">
+      <div className="lg:col-span-8 relative rounded-xl sm:rounded-2xl overflow-hidden">
+        <div className="relative aspect-[16/9] sm:aspect-[2/1]">
           {banners.map((banner, index) => (
             <div
               key={banner.id}
@@ -82,32 +82,32 @@ export function BannerSlider() {
             >
               <Image
                 src={banner.image || "/placeholder.svg"}
-                alt={"image"}
+                alt={banner.alt || "Banner"}
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority={index === 0}
               />
             </div>
           ))}
           <button
             onClick={prevSlide}
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+            className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-700" />
+            <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-gray-700" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+            className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg"
           >
-            <ChevronRight className="w-6 h-6 text-gray-700" />
+            <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-gray-700" />
           </button>
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2">
             {banners.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentSlide ? "bg-white w-6" : "bg-white/50"
+                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all ${
+                  index === currentSlide ? "bg-white w-4 sm:w-6" : "bg-white/50"
                 }`}
               />
             ))}
@@ -115,18 +115,18 @@ export function BannerSlider() {
         </div>
 
         {/* Small banners below main */}
-        <div className="grid grid-cols-2 gap-4 mt-4">
+        <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-2 sm:mt-4">
           {smallBanners.map((banner, index) => (
             <div
               key={index}
-              className="rounded-xl overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+              className="rounded-lg sm:rounded-xl overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
             >
               <Image
                 src={banner.image || "/placeholder.svg"}
                 alt={banner.alt}
-                width={200}
+                width={400}
                 height={150}
-                className="w-full h-24 object-cover"
+                className="w-full h-16 sm:h-24 object-cover object-center"
               />
             </div>
           ))}
@@ -134,25 +134,25 @@ export function BannerSlider() {
       </div>
 
       {/* Side banners - takes 4 columns */}
-      <div className="hidden lg:flex lg:col-span-4 flex-col gap-3">
+      <div className="hidden lg:flex lg:col-span-4 flex-col gap-2 sm:gap-3">
         {sideBanners.map((banner) => (
           <div
             key={banner.id}
-            className="rounded-xl overflow-hidden cursor-pointer hover:shadow-lg transition-all relative group"
+            className="rounded-lg sm:rounded-xl overflow-hidden cursor-pointer hover:shadow-lg transition-all relative group"
           >
             <Image
               src={banner.image || "/placeholder.svg"}
               alt={banner.title}
               width={300}
               height={200}
-              className="w-full h-28 object-cover"
+              className="w-full h-24 sm:h-28 object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center px-4">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center px-3 sm:px-4">
               <div>
-                <h3 className="text-white font-bold text-sm leading-tight mb-2">
+                <h3 className="text-white font-bold text-xs sm:text-sm leading-tight mb-1 sm:mb-2">
                   {banner.title}
                 </h3>
-                <button className="px-3 py-1 bg-cyan-500 text-white text-xs rounded-full hover:bg-cyan-600 transition-colors">
+                <button className="px-2 sm:px-3 py-0.5 sm:py-1 bg-cyan-500 text-white text-[10px] sm:text-xs rounded-full hover:bg-cyan-600 transition-colors">
                   {banner.cta}
                 </button>
               </div>

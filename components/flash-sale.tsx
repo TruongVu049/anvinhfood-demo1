@@ -14,62 +14,62 @@ const timeSlots = [
 const flashSaleProducts = [
   {
     id: "1",
-    name: "Cá hồi Na Uy nguyên con đông lạnh 2-3kg",
-    image: "/salmon-fish.jpg",
-    price: 245000,
-    originalPrice: 315000,
-    unit: "Khay",
-    discount: 22,
+    name: "Xi măng Holcim PCB40 bao 50kg",
+    image: "/ximang2.png",
+    price: 85000,
+    originalPrice: 105000,
+    unit: "Bao",
+    discount: 19,
     showFlashDeal: true,
   },
   {
     id: "2",
-    name: "Cá hồi Na Uy phi lê đông lạnh tươi ngon 500g",
-    image: "/pan-seared-salmon.png",
-    price: 289000,
-    originalPrice: 370000,
-    unit: "Khay",
-    discount: 22,
+    name: "Thép Việt Nhật phi 12mm cuộn",
+    image: "/thep2.png",
+    price: 780000,
+    originalPrice: 920000,
+    unit: "Cuộn",
+    discount: 15,
     showFlashDeal: true,
   },
   {
     id: "3",
-    name: "Tôm sú size 20 đông lạnh tự nhiên 1kg",
-    image: "/tiger-shrimp.jpg",
-    price: 385000,
-    originalPrice: 495000,
-    unit: "Hộp",
-    discount: 22,
+    name: "Sơn Jotun Essence nội thất 5L",
+    image: "/son2.png",
+    price: 485000,
+    originalPrice: 595000,
+    unit: "Thùng",
+    discount: 18,
     showFlashDeal: true,
   },
   {
     id: "4",
-    name: "Cua hoàng đế Alaska nguyên con 1.5kg",
-    image: "/king-crab.jpg",
+    name: "Gạch men 60x60 cao cấp",
+    image: "/gach2.png",
     price: 165000,
     originalPrice: 212000,
-    unit: "Khay",
+    unit: "m²",
     discount: 22,
     showFlashDeal: true,
   },
   {
     id: "5",
-    name: "Tôm sú size 20 đông lạnh tự nhiên 1kg",
-    image: "/tiger-shrimp.jpg",
-    price: 385000,
-    originalPrice: 495000,
-    unit: "Hộp",
+    name: "Ngói nhà cao cấp chống nóng",
+    image: "/ngoi.png",
+    price: 25000,
+    originalPrice: 32000,
+    unit: "Viên",
     discount: 22,
     showFlashDeal: true,
   },
   {
     id: "6",
-    name: "Cua hoàng đế Alaska nguyên con 1.5kg",
-    image: "/king-crab.jpg",
-    price: 165000,
-    originalPrice: 212000,
-    unit: "Khay",
-    discount: 22,
+    name: "Gỗ xây dựng cao cấp",
+    image: "/go.png",
+    price: 420000,
+    originalPrice: 500000,
+    unit: "m²",
+    discount: 17,
     showFlashDeal: true,
   },
 ];
@@ -100,51 +100,51 @@ export function FlashSale() {
   return (
     <section className="my-8">
       {/* Flash Sale Header Banner */}
-      <div className="relative bg-gradient-to-r from-[#1a56db] via-[#3b82f6] to-[#60a5fa] rounded-t-2xl p-4 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-[#1a56db] via-[#3b82f6] to-[#60a5fa] rounded-t-2xl p-3 sm:p-4 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-1/4 w-32 h-32 bg-cyan-400 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-blue-400 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/4 w-20 sm:w-32 h-20 sm:h-32 bg-cyan-400 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-24 sm:w-40 h-24 sm:h-40 bg-blue-400 rounded-full blur-3xl" />
         </div>
-        <div className="relative flex items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-4">
             <h2
-              className="text-3xl font-bold text-white italic"
+              className="text-xl sm:text-3xl font-bold text-white italic"
               style={{ fontFamily: "cursive" }}
             >
               Flash<span className="text-cyan-300">sale</span> GIÁ SỐC
             </h2>
-            <span className="text-white text-sm">❄️ Đông lạnh tươi ngon</span>
+            <span className="text-white text-xs sm:text-sm hidden sm:inline">🏗️ Vật liệu chất lượng</span>
           </div>
-          <button className="px-6 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold rounded-full text-sm hover:from-cyan-500 hover:to-blue-600 transition-all shadow-lg">
+          <button className="px-4 sm:px-6 py-1.5 sm:py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold rounded-full text-xs sm:text-sm hover:from-cyan-500 hover:to-blue-600 transition-all shadow-lg">
             XEM NGAY {">"}
           </button>
         </div>
-        <div className="text-right text-white text-sm mt-1">
+        <div className="text-right text-white text-xs sm:text-sm mt-1 hidden sm:block">
           Xem thể lệ {">"}
         </div>
       </div>
 
       {/* Time Slots */}
       <div className="bg-white border-x border-gray-200">
-        <div className="flex overflow-x-auto">
+        <div className="flex overflow-x-auto scrollbar-hide">
           {timeSlots.map((slot, index) => (
             <button
               key={index}
-              className={`flex-1 min-w-[180px] py-3 px-4 text-center border-b-2 transition-colors ${
+              className={`flex-1 min-w-[120px] sm:min-w-[180px] py-2 sm:py-3 px-2 sm:px-4 text-center border-b-2 transition-colors ${
                 slot.active
                   ? "border-[#1a56db] bg-blue-50"
                   : "border-transparent hover:bg-gray-50"
               }`}
             >
               <div
-                className={`font-semibold ${
+                className={`font-semibold text-xs sm:text-sm ${
                   slot.active ? "text-[#1a56db]" : "text-gray-700"
                 }`}
               >
                 {slot.time}
               </div>
               <div
-                className={`text-xs ${
+                className={`text-[10px] sm:text-xs ${
                   slot.active ? "text-[#ff3b3b]" : "text-gray-500"
                 }`}
               >
@@ -156,19 +156,19 @@ export function FlashSale() {
       </div>
 
       {/* Countdown */}
-      <div className="bg-white px-4 py-3 border-x border-gray-200">
+      <div className="bg-white px-3 sm:px-4 py-2 sm:py-3 border-x border-gray-200">
         <div className="flex items-center gap-2">
-          <span className="text-gray-600 text-sm">Kết thúc sau</span>
+          <span className="text-gray-600 text-xs sm:text-sm">Kết thúc sau</span>
           <div className="flex items-center gap-1">
-            <div className="bg-[#1a56db] text-white font-bold w-8 h-8 rounded flex items-center justify-center text-sm">
+            <div className="bg-[#1a56db] text-white font-bold w-6 h-6 sm:w-8 sm:h-8 rounded flex items-center justify-center text-xs sm:text-sm" suppressHydrationWarning>
               {String(timeLeft.hours).padStart(2, "0")}
             </div>
-            <span className="text-gray-800 font-bold">:</span>
-            <div className="bg-[#1a56db] text-white font-bold w-8 h-8 rounded flex items-center justify-center text-sm">
+            <span className="text-gray-800 font-bold text-xs sm:text-sm">:</span>
+            <div className="bg-[#1a56db] text-white font-bold w-6 h-6 sm:w-8 sm:h-8 rounded flex items-center justify-center text-xs sm:text-sm" suppressHydrationWarning>
               {String(timeLeft.minutes).padStart(2, "0")}
             </div>
-            <span className="text-gray-800 font-bold">:</span>
-            <div className="bg-[#1a56db] text-white font-bold w-8 h-8 rounded flex items-center justify-center text-sm">
+            <span className="text-gray-800 font-bold text-xs sm:text-sm">:</span>
+            <div className="bg-[#1a56db] text-white font-bold w-6 h-6 sm:w-8 sm:h-8 rounded flex items-center justify-center text-xs sm:text-sm" suppressHydrationWarning>
               {String(timeLeft.seconds).padStart(2, "0")}
             </div>
           </div>
@@ -176,19 +176,19 @@ export function FlashSale() {
       </div>
 
       {/* Products */}
-      <div className="bg-white rounded-b-2xl border border-t-0 border-gray-200 p-4">
+      <div className="bg-white rounded-b-2xl border border-t-0 border-gray-200 p-2 sm:p-4">
         <div className="relative">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4">
             {flashSaleProducts.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
           </div>
-          <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 z-10">
-            <ChevronRight className="w-6 h-6 text-gray-600" />
+          <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 w-8 h-8 sm:w-10 sm:h-10 bg-white shadow-lg rounded-full items-center justify-center hover:bg-gray-50 z-10 hidden sm:flex">
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
           </button>
         </div>
-        <div className="text-center mt-6">
-          <button className="text-[#1a56db] font-medium hover:underline">
+        <div className="text-center mt-4 sm:mt-6">
+          <button className="text-[#1a56db] font-medium hover:underline text-sm sm:text-base">
             Xem tất cả {">"}
           </button>
         </div>

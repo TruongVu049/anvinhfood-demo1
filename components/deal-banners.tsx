@@ -3,83 +3,83 @@ import Image from "next/image";
 
 const deals = [
   {
-    image: "/frozen-seafood-promotion-blue-background.jpg",
-    alt: "Hải sản tươi sống - Giảm đến 30%",
+    image: "/banner1.png",
+    alt: "Vật liệu xây dựng - Giảm đến 30%",
     href: "#",
   },
   {
-    image: "/banner1.png",
-    alt: "Hải sản tươi sống - Giảm đến 30%",
+    image: "/banner2.png",
+    alt: "Chương trình ưu đãi đặc biệt",
     href: "#",
   },
 ];
 
 const subDeals = [
   {
+    image: "/banner1.png",
+    alt: "Xi măng chính hãng",
+    href: "#",
+  },
+  {
     image: "/banner2.png",
-    alt: "Thịt nhập khẩu",
+    alt: "Thép xây dựng",
     href: "#",
   },
   {
     image: "/banner3.png",
-    alt: "Rau củ đông lạnh",
+    alt: "Sơn cao cấp",
     href: "#",
   },
   {
     image: "/banner1.png",
-    alt: "Kem & Tráng miệng",
-    href: "#",
-  },
-  {
-    image: "/banner3.png",
-    alt: "Đồ ăn chế biến sẵn",
+    alt: "Gạch ốp lát",
     href: "#",
   },
 ];
 
 export function DealBanners() {
   return (
-    <section className="py-8">
-      <div className="flex items-center gap-2 mb-6">
-        <div className="w-6 h-6 bg-[#1a56db] rounded-full flex items-center justify-center">
-          <span className="text-white text-xs">🎁</span>
+    <section className="py-4 sm:py-8">
+      <div className="flex items-center gap-2 mb-4 sm:mb-6">
+        <div className="w-5 h-5 sm:w-6 sm:h-6 bg-[#1a56db] rounded-full flex items-center justify-center">
+          <span className="text-white text-[10px] sm:text-xs">🎁</span>
         </div>
-        <h2 className="text-xl font-bold text-gray-900">Ưu đãi hấp dẫn</h2>
+        <h2 className="text-lg sm:text-xl font-bold text-gray-900">Ưu đãi hấp dẫn</h2>
       </div>
 
       {/* Top banners */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-4 mb-2 sm:mb-4">
         {deals.map((deal, index) => (
           <Link
             key={index}
             href={deal.href}
-            className="rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
+            className="rounded-xl sm:rounded-2xl overflow-hidden hover:shadow-lg transition-shadow bg-gray-100"
           >
             <Image
               src={deal.image || "/placeholder.svg"}
               alt={deal.alt}
-              width={400}
-              height={200}
-              className="w-full h-32 md:h-40 object-cover"
+              width={600}
+              height={300}
+              className="w-full h-auto object-contain"
             />
           </Link>
         ))}
       </div>
 
       {/* Bottom banners */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4">
         {subDeals.map((deal, index) => (
           <Link
             key={index}
             href={deal.href}
-            className="rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
+            className="rounded-xl sm:rounded-2xl overflow-hidden hover:shadow-lg transition-shadow bg-gray-100"
           >
             <Image
               src={deal.image || "/placeholder.svg"}
               alt={deal.alt}
               width={300}
-              height={300}
-              className="w-full aspect-square object-cover"
+              height={200}
+              className="w-full h-auto object-contain"
             />
           </Link>
         ))}

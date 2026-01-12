@@ -12,63 +12,63 @@ import { ProductCard } from "@/components/product-card";
 const recentlyViewed = [
   {
     id: "rv1",
-    name: "Cá hồi Na Uy phi lê đông lạnh tươi ngon 500g",
-    image: "/pan-seared-salmon.png",
-    price: 320000,
-    originalPrice: 410000,
-    unit: "Khay",
-    discount: 22,
-    packaging: "500g",
+    name: "Xi măng Hà Tiên PCB40 bao 50kg",
+    image: "/ximang.png",
+    price: 95000,
+    originalPrice: 110000,
+    unit: "Bao",
+    discount: 14,
+    packaging: "50kg",
   },
   {
     id: "rv2",
-    name: "Cá hồi Na Uy phi lê đông lạnh tươi ngon 500g",
-    image: "/pan-seared-salmon.png",
-    price: 320000,
-    originalPrice: 410000,
-    unit: "Khay",
-    discount: 22,
-    packaging: "500g",
+    name: "Thép Pomina phi 10mm cuộn 50kg",
+    image: "/thep.png",
+    price: 890000,
+    originalPrice: 980000,
+    unit: "Cuộn",
+    discount: 9,
+    packaging: "50kg",
   },
   {
     id: "rv3",
-    name: "Tôm sú size 20 đông lạnh tự nhiên 1kg",
-    image: "/tiger-shrimp.jpg",
-    price: 450000,
-    originalPrice: 520000,
-    unit: "Hộp",
-    discount: 15,
-    packaging: "1kg",
+    name: "Sơn Dulux nội thất cao cấp 18L",
+    image: "/son.png",
+    price: 1650000,
+    originalPrice: 1850000,
+    unit: "Thùng",
+    discount: 11,
+    packaging: "18L",
   },
   {
     id: "rv4",
-    name: "Cá hồi Na Uy phi lê đông lạnh tươi ngon 500g",
-    image: "/pan-seared-salmon.png",
-    price: 320000,
-    originalPrice: 410000,
-    unit: "Khay",
-    discount: 22,
-    packaging: "500g",
+    name: "Gạch ống Tuynel 4 lỗ loại A",
+    image: "/gach.png",
+    price: 1800,
+    originalPrice: 2200,
+    unit: "Viên",
+    discount: 18,
+    packaging: "Viên",
   },
   {
     id: "rv5",
-    name: "Sò điệp Nhật Bản size L đông lạnh 500g",
-    image: "/japanese-scallop.jpg",
-    price: 380000,
-    originalPrice: 450000,
-    unit: "Hộp",
+    name: "Gỗ xây dựng cao cấp",
+    image: "/go.png",
+    price: 165000,
+    originalPrice: 195000,
+    unit: "m²",
     discount: 15,
-    packaging: "500g",
+    packaging: "m²",
   },
   {
     id: "rv6",
-    name: "Cá hồi Na Uy phi lê đông lạnh tươi ngon 500g",
-    image: "/pan-seared-salmon.png",
-    price: 320000,
-    originalPrice: 410000,
-    unit: "Khay",
-    discount: 22,
-    packaging: "500g",
+    name: "Cát xây dựng loại 1 mịn",
+    image: "/cat.png",
+    price: 350000,
+    originalPrice: 400000,
+    unit: "Khối",
+    discount: 12,
+    packaging: "1m³",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#f5f7fb]">
       <Header />
 
-      <main className="max-w-7xl mx-auto px-4 py-6">
+      <main className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
         {/* Banner Section */}
         <BannerSlider />
 
@@ -100,16 +100,16 @@ export default function HomePage() {
         <SeasonalDisease />
 
         {/* Recently Viewed */}
-        <section className="py-8">
-          <div className="flex items-center gap-2 mb-6">
-            <div className="w-6 h-6 bg-[#1a56db] rounded-full flex items-center justify-center">
-              <span className="text-white text-xs">👁️</span>
+        <section className="py-4 sm:py-8">
+          <div className="flex items-center gap-2 mb-4 sm:mb-6">
+            <div className="w-5 h-5 sm:w-6 sm:h-6 bg-[#1a56db] rounded-full flex items-center justify-center">
+              <span className="text-white text-[10px] sm:text-xs">👁️</span>
             </div>
-            <h2 className="text-xl font-bold text-gray-900">
+            <h2 className="text-base sm:text-xl font-bold text-gray-900">
               Sản phẩm vừa xem
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-4">
             {recentlyViewed.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}

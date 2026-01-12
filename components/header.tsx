@@ -9,182 +9,106 @@ import {
   ChevronDown,
   Menu,
   X,
-  Mic,
-  Camera,
   Car,
 } from "lucide-react";
 
 const mainCategories = [
   {
-    label: "Hải sản cao cấp",
-    href: "/hai-san",
+    label: "Vật liệu cơ bản",
+    href: "/vat-lieu",
     hasDropdown: true,
-    icon: "🦐",
+    icon: "🧱",
     subCategories: [
-      { label: "Tôm các loại", icon: "/cooked-shrimp-platter.png" },
-      { label: "Cá hồi - Cá ngừ", icon: "/salmon-fish.jpg" },
-      { label: "Mực - Bạch tuộc", icon: "/squid-octopus.jpg" },
-      { label: "Nghêu - Sò - Ốc", icon: "/clams-on-sand.png" },
-      { label: "Cua - Ghẹ", icon: "/solitary-crab.png" },
+      { label: "Xi măng các loại", icon: "/ximang.png" },
+      { label: "Thép xây dựng", icon: "/thep.png" },
+      { label: "Gạch - Ngói", icon: "/gach.png" },
+      { label: "Cát - Đá - Sỏi", icon: "/cat.png" },
+      { label: "Gỗ xây dựng", icon: "/go.png" },
       { label: "Xem thêm", icon: "" },
     ],
     sideItems: [
-      { label: "Tôm sú", icon: "🦐" },
-      { label: "Tôm hùm", icon: "🦞" },
-      { label: "Cá hồi Na Uy", icon: "🐟" },
-      { label: "Cá ngừ đại dương", icon: "🐠" },
-      { label: "Mực ống", icon: "🦑" },
-      { label: "Bạch tuộc", icon: "🐙" },
-      { label: "Cua hoàng đế", icon: "🦀" },
-      { label: "Nghêu trắng", icon: "🐚" },
-      { label: "Sò điệp", icon: "🦪" },
+      { label: "Xi măng Hà Tiên", icon: "🧱" },
+      { label: "Xi măng Holcim", icon: "🧱" },
+      { label: "Thép Pomina", icon: "🔩" },
+      { label: "Thép Việt Nhật", icon: "🔩" },
+      { label: "Gạch Tuynel", icon: "🏗️" },
+      { label: "Gạch block", icon: "🏗️" },
+      { label: "Cát xây dựng", icon: "⛰️" },
+      { label: "Đá 1x2", icon: "⛰️" },
+      { label: "Đá 4x6", icon: "⛰️" },
     ],
     bestSellers: [
-      {
-        name: "Cá hồi Na Uy phi lê đông lạnh 500g",
-        price: 320000,
-        image: "/pan-seared-salmon.png",
-      },
-      {
-        name: "Tôm sú size 20 đông lạnh 1kg",
-        price: 450000,
-        image: "/tiger-shrimp.jpg",
-      },
-      {
-        name: "Mực ống làm sạch đông lạnh 500g",
-        price: 185000,
-        image: "/cleaned-squid.jpg",
-      },
-      {
-        name: "Sò điệp Nhật Bản size L 500g",
-        price: 380000,
-        image: "/japanese-scallop.jpg",
-      },
-      {
-        name: "Cua hoàng đế Alaska 1kg",
-        price: 1200000,
-        image: "/king-crab.jpg",
-      },
+      { name: "Xi măng Hà Tiên PCB40 50kg", price: 95000, image: "/ximang.png" },
+      { name: "Thép Pomina phi 10mm cuộn", price: 890000, image: "/thep.png" },
+      { name: "Gạch ống Tuynel 4 lỗ", price: 1800, image: "/gach.png" },
+      { name: "Cát xây dựng loại 1", price: 350000, image: "/cat.png" },
+      { name: "Gỗ xây dựng cao cấp", price: 420000, image: "/go.png" },
     ],
   },
   {
-    label: "Thực phẩm đông lạnh",
-    href: "/hai-san",
+    label: "Sơn - Chống thấm",
+    href: "/son",
     hasDropdown: true,
-    icon: "🦐",
+    icon: "🎨",
     subCategories: [
-      { label: "Tôm các loại", icon: "/cooked-shrimp-platter.png" },
-      { label: "Cá hồi - Cá ngừ", icon: "/salmon-fish.jpg" },
-      { label: "Mực - Bạch tuộc", icon: "/squid-octopus.jpg" },
-      { label: "Nghêu - Sò - Ốc", icon: "/clams-on-sand.png" },
-      { label: "Cua - Ghẹ", icon: "/solitary-crab.png" },
+      { label: "Sơn nội thất", icon: "/son.png" },
+      { label: "Sơn ngoại thất", icon: "/son2.png" },
+      { label: "Sơn chống thấm", icon: "/son3.png" },
+      { label: "Sơn lót", icon: "/son4.png" },
+      { label: "Bột bả tường", icon: "/son5.png" },
       { label: "Xem thêm", icon: "" },
     ],
     sideItems: [
-      { label: "Tôm sú", icon: "🦐" },
-      { label: "Tôm hùm", icon: "🦞" },
-      { label: "Cá hồi Na Uy", icon: "🐟" },
-      { label: "Cá ngừ đại dương", icon: "🐠" },
-      { label: "Mực ống", icon: "🦑" },
-      { label: "Bạch tuộc", icon: "🐙" },
-      { label: "Cua hoàng đế", icon: "🦀" },
-      { label: "Nghêu trắng", icon: "🐚" },
-      { label: "Sò điệp", icon: "🦪" },
+      { label: "Sơn Dulux", icon: "🎨" },
+      { label: "Sơn Jotun", icon: "🎨" },
+      { label: "Sơn Nippon", icon: "🎨" },
+      { label: "Sơn TOA", icon: "🎨" },
+      { label: "Kova chống thấm", icon: "💧" },
+      { label: "Sika chống thấm", icon: "💧" },
     ],
     bestSellers: [
-      {
-        name: "Cá hồi Na Uy phi lê đông lạnh 500g",
-        price: 320000,
-        image: "/pan-seared-salmon.png",
-      },
-      {
-        name: "Tôm sú size 20 đông lạnh 1kg",
-        price: 450000,
-        image: "/tiger-shrimp.jpg",
-      },
-      {
-        name: "Mực ống làm sạch đông lạnh 500g",
-        price: 185000,
-        image: "/cleaned-squid.jpg",
-      },
-      {
-        name: "Sò điệp Nhật Bản size L 500g",
-        price: 380000,
-        image: "/japanese-scallop.jpg",
-      },
-      {
-        name: "Cua hoàng đế Alaska 1kg",
-        price: 1200000,
-        image: "/king-crab.jpg",
-      },
+      { name: "Sơn Dulux nội thất 18L", price: 1650000, image: "/son.png" },
+      { name: "Sơn Jotun Essence 5L", price: 485000, image: "/son2.png" },
+      { name: "Chống thấm Sika 5kg", price: 280000, image: "/son3.png" },
     ],
   },
   {
-    label: "Thực phẩm khô",
-    href: "/hai-san",
+    label: "Thiết bị vệ sinh",
+    href: "/ve-sinh",
     hasDropdown: true,
-    icon: "🦐",
+    icon: "🚿",
     subCategories: [
-      { label: "Tôm các loại", icon: "/cooked-shrimp-platter.png" },
-      { label: "Cá hồi - Cá ngừ", icon: "/salmon-fish.jpg" },
-      { label: "Mực - Bạch tuộc", icon: "/squid-octopus.jpg" },
-      { label: "Nghêu - Sò - Ốc", icon: "/clams-on-sand.png" },
-      { label: "Cua - Ghẹ", icon: "/solitary-crab.png" },
+      { label: "Bồn cầu", icon: "/boncau.png" },
+      { label: "Lavabo - Chậu rửa", icon: "/dungcunhavesinh.png" },
+      { label: "Vòi sen - Sen tắm", icon: "/shower.png" },
+      { label: "Phụ kiện phòng tắm", icon: "/accessories.png" },
       { label: "Xem thêm", icon: "" },
     ],
     sideItems: [
-      { label: "Tôm sú", icon: "🦐" },
-      { label: "Tôm hùm", icon: "🦞" },
-      { label: "Cá hồi Na Uy", icon: "🐟" },
-      { label: "Cá ngừ đại dương", icon: "🐠" },
-      { label: "Mực ống", icon: "🦑" },
-      { label: "Bạch tuộc", icon: "🐙" },
-      { label: "Cua hoàng đế", icon: "🦀" },
-      { label: "Nghêu trắng", icon: "🐚" },
-      { label: "Sò điệp", icon: "🦪" },
+      { label: "TOTO", icon: "🚿" },
+      { label: "INAX", icon: "🚿" },
+      { label: "American Standard", icon: "🚿" },
+      { label: "Caesar", icon: "🚿" },
     ],
     bestSellers: [
-      {
-        name: "Cá hồi Na Uy phi lê đông lạnh 500g",
-        price: 320000,
-        image: "/pan-seared-salmon.png",
-      },
-      {
-        name: "Tôm sú size 20 đông lạnh 1kg",
-        price: 450000,
-        image: "/tiger-shrimp.jpg",
-      },
-      {
-        name: "Mực ống làm sạch đông lạnh 500g",
-        price: 185000,
-        image: "/cleaned-squid.jpg",
-      },
-      {
-        name: "Sò điệp Nhật Bản size L 500g",
-        price: 380000,
-        image: "/japanese-scallop.jpg",
-      },
-      {
-        name: "Cua hoàng đế Alaska 1kg",
-        price: 1200000,
-        image: "/king-crab.jpg",
-      },
+      { name: "Bồn cầu TOTO 1 khối", price: 3850000, image: "/boncau.png" },
+      { name: "Lavabo INAX chân đứng", price: 1250000, image: "/dungcunhavesinh.png" },
     ],
   },
-  { label: "Giới thiệu sản phẩm", href: "/gioi-thieu-san-pham", icon: "🔥" },
+  { label: "Giới thiệu sản phẩm", href: "/gioi-thieu-san-pham", icon: "📋" },
   { label: "Khuyến mãi", href: "/khuyen-mai", icon: "🔥" },
-  { label: "Combo tiết kiệm", href: "/combo", icon: "💰" },
-  { label: "Hệ thống cửa hàng", href: "/he-thong-cua-hang" },
+  { label: "Combo tiết kiệm", href: "/combo", icon: "📦" },
+  { label: "Hệ thống cửa hàng", href: "/he-thong-cua-hang", icon: "🏪" },
 ];
 
 const quickSearchTerms = [
-  "Cá hồi",
-  "Tôm sú",
-  "Cua biển",
-  "Mực ống",
-  "Sò điệp",
-  "Hàu sữa",
-  "Bạch tuộc",
+  "Xi măng",
+  "Thép xây dựng",
+  "Gạch ống",
+  "Sơn Dulux",
+  "Cát đá",
+  "Bồn cầu",
+  "Gạch men",
 ];
 
 export function Header() {
@@ -221,7 +145,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <Search className="w-3.5 h-3.5" />
             <span className="hidden sm:inline text-sm">
-              Thực phẩm đông lạnh chất lượng cao
+              Vật liệu xây dựng chính hãng - Giá tốt nhất
             </span>
             <Link
               href="#"
@@ -236,7 +160,7 @@ export function Header() {
               className="flex items-center gap-1.5 hover:text-yellow-300 text-sm"
             >
               <Car />
-              <span>GIAO HÀNG HỎA TỐC 2H</span>
+              <span>GIAO HÀNG TẬN CÔNG TRÌNH</span>
             </Link>
             <Link
               href="tel:19001234"
@@ -258,7 +182,7 @@ export function Header() {
               <span>7:30 - 17:30 | Thứ 2 - Thứ 7</span>
             </Link>
             <Link
-              href="tel:19001234"
+              href="tel:+842841099879"
               className="flex items-center gap-1.5 hover:text-yellow-300 text-sm"
             >
               <svg
@@ -274,7 +198,7 @@ export function Header() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span>Hotline: 0813.662.778</span>
+              <span>Hotline: (+84) 2841099879</span>
             </Link>
           </div>
         </div>
@@ -283,16 +207,16 @@ export function Header() {
       {/* Main header */}
       <div className="bg-[#1a56db] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-start gap-6 py-3 md:flex-nowrap flex-wrap">
-            {/* Logo - Updated for frozen food */}
-            <Link href="/" className="flex-shrink-0 md:w-auto w-full">
+          <div className="flex items-center gap-6 py-3 md:flex-nowrap flex-wrap">
+            {/* Logo */}
+            <Link href="/" className="shrink-0 md:w-auto w-full">
               <div className="flex items-center gap-2">
                 <Image
                   src="/logo.png"
-                  alt="Frozen Food Logo"
+                  alt="Logo Vật liệu xây dựng"
                   width={48}
                   height={48}
-                  className="w-44 h-auto object-contain"
+                  className="w-24 h-auto object-contain"
                 />
               </div>
             </Link>
@@ -302,7 +226,7 @@ export function Header() {
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Tìm thực phẩm đông lạnh, hải sản, thịt nhập khẩu..."
+                  placeholder="Tìm xi măng, thép, gạch, sơn, thiết bị vệ sinh..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onKeyPress={handleKeyPress}

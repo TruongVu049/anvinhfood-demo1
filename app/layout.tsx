@@ -7,18 +7,18 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin", "vietnamese"] });
 
 export const metadata: Metadata = {
-  title: "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ AN VĨNH		",
-  description: "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ AN VĨNH",
+  title: "MeU Solutions - Vật Liệu Xây Dựng Chất Lượng",
+  description: "MeU Solutions - Chuyên cung cấp vật liệu xây dựng chính hãng, giá tốt nhất thị trường",
   icons: {
     icon: [
-      { url: "/favicon.png" },
-      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png" },
+      { url: "/logo.png", sizes: "16x16", type: "image/png" },
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: [{ url: "/favicon.png" }],
+    apple: [{ url: "/logo.png" }],
     other: [
-      { rel: "android-chrome-192x192", url: "/favicon.png" },
-      { rel: "android-chrome-512x512", url: "/favicon.png" },
+      { rel: "android-chrome-192x192", url: "/logo.png" },
+      { rel: "android-chrome-512x512", url: "/logo.png" },
     ],
   },
 };

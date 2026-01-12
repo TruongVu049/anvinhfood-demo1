@@ -5,43 +5,38 @@ const aboutLinks = [
   "Giới thiệu",
   "Hệ thống cửa hàng",
   "Giấy phép kinh doanh",
-  "Chứng nhận an toàn thực phẩm",
+  "Chứng nhận chất lượng VLXD",
   "Quy chế hoạt động",
-  "Chính sách bảo quản lạnh",
+  "Chính sách bảo hành",
   "Chính sách đổi trả",
   "Chính sách giao hàng",
   "Chính sách bảo mật",
   "Chính sách thanh toán",
-  "Quy trình vận chuyển đông lạnh",
-  "Cam kết chất lượng",
 ];
 
 const categoryLinks = [
-  "Hải sản cao cấp",
-  "Hải sản bình dân",
-  "Đồ ăn chế biến sẵn",
-  "Combo tiết kiệm",
-  "Khuyến mãi",
+  "Xi măng - Vữa",
+  "Thép xây dựng",
+  "Gạch - Ngói - Đá",
+  "Sơn - Chống thấm",
+  "Thiết bị vệ sinh",
+  "Vật tư điện - nước",
 ];
 
 const moreLinks = [
-  "Góc ẩm thực",
-  "Công thức nấu ăn",
-  "Cách bảo quản thực phẩm",
-  "Kiến thức dinh dưỡng",
+  "Kiến thức xây dựng",
+  "Hướng dẫn thi công",
+  "Bảo trì công trình",
+  "Tư vấn thiết kế",
   "Tin tức khuyến mãi",
   "Tuyển dụng",
 ];
 
 const guarantees = [
-  { icon: "❄️", text: "Đông lạnh chuẩn", subtext: "-18°C đến -25°C" },
-  {
-    icon: "↩️",
-    text: "Đổi trả trong vòng 7 ngày",
-    subtext: "nếu không hài lòng",
-  },
-  { icon: "✅", text: "Cam kết 100%", subtext: "nguồn gốc rõ ràng" },
-  { icon: "🚚", text: "Giao hàng lạnh", subtext: "giữ trọn độ tươi" },
+  { icon: "✓", text: "Hàng chính hãng", subtext: "100% nguồn gốc rõ ràng" },
+  { icon: "↩️", text: "Đổi trả 7 ngày", subtext: "nếu sản phẩm lỗi" },
+  { icon: "🚚", text: "Giao tận công trình", subtext: "miễn phí từ 5 triệu" },
+  { icon: "💰", text: "Giá cạnh tranh", subtext: "chiết khấu sỉ cao" },
 ];
 
 export function Footer() {
@@ -49,16 +44,16 @@ export function Footer() {
     <footer className="bg-white border-t">
       {/* Guarantees */}
       <div className="border-b">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
             {guarantees.map((item, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
+              <div key={index} className="flex items-center gap-2 sm:gap-3">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full flex items-center justify-center text-xl sm:text-2xl flex-shrink-0">
                   {item.icon}
                 </div>
                 <div>
-                  <div className="font-medium text-gray-900">{item.text}</div>
-                  <div className="text-xs text-gray-500">{item.subtext}</div>
+                  <div className="font-medium text-gray-900 text-xs sm:text-base">{item.text}</div>
+                  <div className="text-[10px] sm:text-xs text-gray-500">{item.subtext}</div>
                 </div>
               </div>
             ))}
@@ -68,16 +63,16 @@ export function Footer() {
 
       {/* Store locator banner */}
       <div className="bg-[#1a56db]">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3 text-white">
-            <MapPin className="w-6 h-6" />
-            <span className="text-lg font-medium">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 text-white text-center sm:text-left">
+            <MapPin className="w-5 h-5 sm:w-6 sm:h-6 hidden sm:block" />
+            <span className="text-sm sm:text-lg font-medium">
               Xem hệ thống 50+ cửa hàng trên toàn quốc
             </span>
           </div>
           <Link
             href="#"
-            className="px-6 py-2.5 bg-white text-[#1a56db] rounded-full font-medium hover:bg-gray-100 transition-colors"
+            className="px-4 sm:px-6 py-2 sm:py-2.5 bg-white text-[#1a56db] rounded-full font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base"
           >
             Xem danh sách cửa hàng
           </Link>
@@ -85,8 +80,8 @@ export function Footer() {
       </div>
 
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 py-10">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8">
           {/* About */}
           <div>
             <h3 className="font-bold text-gray-900 mb-4 text-sm">
@@ -151,28 +146,30 @@ export function Footer() {
               <div>
                 <p className="text-sm text-gray-600">Đặt hàng</p>
                 <Link
-                  href="tel:19001234"
+                  href="tel:+842841099879"
                   className="text-[#1a56db] font-bold text-lg"
-                ></Link>
+                >
+                  (+84) 284 109 9879
+                </Link>
                 <span className="text-xs text-gray-500 ml-1">(Nhánh 1)</span>
               </div>
               <div>
                 <p className="text-sm text-gray-600">Hỗ trợ khách hàng</p>
                 <Link
-                  href="tel:19001234"
+                  href="tel:+842841099879"
                   className="text-[#1a56db] font-bold text-lg"
                 >
-                  1900 1234
+                  (+84) 284 109 9879
                 </Link>
                 <span className="text-xs text-gray-500 ml-1">(Nhánh 2)</span>
               </div>
               <div>
                 <p className="text-sm text-gray-600">Góp ý, khiếu nại</p>
                 <Link
-                  href="tel:19001234"
+                  href="tel:+842841099879"
                   className="text-[#1a56db] font-bold text-lg"
                 >
-                  1900 1234
+                  (+84) 284 109 9879
                 </Link>
                 <span className="text-xs text-gray-500 ml-1">(Nhánh 3)</span>
               </div>
@@ -186,12 +183,12 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <div className="w-20 h-10 bg-green-50 rounded flex items-center justify-center">
                   <span className="text-xs text-green-600 font-medium">
-                    ATTP
+                    ISO 9001
                   </span>
                 </div>
                 <div className="w-20 h-10 bg-blue-50 rounded flex items-center justify-center">
                   <span className="text-xs text-blue-600 font-medium">
-                    ISO 22000
+                    ISO 14001
                   </span>
                 </div>
               </div>
@@ -282,14 +279,61 @@ export function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="border-t">
-        <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
-          <p>© 2020 - 2025 CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ AN VĨNH</p>
-          <p className="mt-2">
-            • Địa chỉ: 87/23 Khu phố 4, đường Phan Văn Hớn, Phường Tân Thới
-            Nhất, Quận 12, Tp HCM • Hotline: 0813.662.778 • Email:
-            anvinhfood.official@gmail.com
-          </p>
+      <div className="border-t bg-[#1a56db]">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {/* Trụ sở chính */}
+            <div>
+              <h3 className="font-bold text-white mb-3 sm:mb-4 text-base sm:text-lg tracking-wide">
+                TRỤ SỞ CHÍNH
+              </h3>
+              <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-gray-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-400">📍</span>
+                  <span>
+                    Văn phòng đại diện: L17-11, Tầng 17 Vincom Center, 72 đường
+                    Lê Thánh Tôn, Phường Sài Gòn, Thành phố Hồ Chí Minh, Việt
+                    Nam
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-400">🏢</span>
+                  <span>
+                    Văn phòng phát triển: 03 Sông Thao, Phường Tân Sơn Hoà,
+                    Thành phố Hồ Chí Minh, Việt Nam
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-blue-400">📞</span>
+                  <span>Hotline: (+84) 2841099879</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-blue-400">✉️</span>
+                  <span>contact@meu-solutions.com</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-blue-400">🌐</span>
+                  <span>www.meu-solutions.com</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Về chúng tôi */}
+            <div>
+              <h3 className="font-bold text-white mb-3 sm:mb-4 text-base sm:text-lg tracking-wide">
+                VỀ CHÚNG TÔI
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                MeU Solutions là đơn vị hàng đầu trong việc kiểm thử và phát
+                triển phần mềm máy tính, mang đến sự đổi mới để cung cấp các
+                giải pháp phù hợp cho khách hàng với kết quả vượt trội.
+              </p>
+            </div>
+          </div>
+
+          <div className="border-t border-blue-400 mt-6 sm:mt-8 pt-4 sm:pt-6 text-center text-xs sm:text-sm text-blue-200">
+            <p>© 2020 - 2026 MEU SOLUTIONS. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
